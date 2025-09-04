@@ -19,6 +19,11 @@ class LoginPage {
         cy.get(selectors.passwordField, { timeout: 10000 }).type(password);
         cy.get(selectors.loginButton).click();
     }
+
+    checkAccessInvalid() {
+        
+        cy.get(this.selectorList().wrongCredentialAlert)
+    }
 }
 
 export default LoginPage;
